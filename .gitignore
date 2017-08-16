@@ -1,0 +1,3 @@
+.idea
+*.spec
+__pycache__/
