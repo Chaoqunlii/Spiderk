@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['main.py'],
-             pathex=['D:\\Documents\\pycharProjects\\QtSpider'],
+             pathex=['C:\\Program Files\\Anaconda3\\Lib\\site-packages\\PyQt5\\Qt\\bin', 'C:\\Users\\Cappu\\OneDrive\\Projects\\QtSpider'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -23,7 +23,7 @@ exe = EXE(pyz,
           debug=False,
           strip=False,
           upx=True,
-          console=True )
+          console=False , icon='C:\\Users\\Cappu\\OneDrive\\Projects\\QtSpider\\resources\\logo.ico')
 coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,

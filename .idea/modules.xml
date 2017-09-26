@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/QtSpider.iml" filepath="$PROJECT_DIR$/.idea/QtSpider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Spiderk.iml" filepath="$PROJECT_DIR$/.idea/Spiderk.iml" />
     </modules>
   </component>
 </project>

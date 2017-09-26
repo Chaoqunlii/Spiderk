@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys, random
 from PyQt5.QtWidgets import QWidget, QLabel, QVBoxLayout, QScrollArea
 from PyQt5.QtGui import QPainter, QPixmap, QImage, QPen

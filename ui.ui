@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1373</width>
-    <height>797</height>
+    <height>793</height>
    </rect>
   </property>
   <property name="acceptDrops">
@@ -21,24 +21,30 @@
     font: 20px bold black;
     font-family: Microsoft Yahei;
 }
-.QPushButton{
+QPushButton{
     color: black;
-    background-color: rgb(247, 250, 253);
+    background-color: rgb(255, 255, 255);
     height: 60px;
     border: none;
 }
-.QPushButton:pressed{
+QPushButton:pressed{
     background-color: rgb(2, 136, 209);
     height: 60px;
     border: none;
 }
-.QPushButton:checked{
+QPushButton:hover{
+    border-radius: 5px;
+    background-color: rgba(0,0,0,10%);
+    height: 60px;
+    border: none;
+}
+QPushButton:checked{
     color: white;
     background-color: rgb(2, 136, 209);
     height: 60px;
     border: none;
 }
-.QFrame{
+QFrame{
     background-color: rgb(247, 250, 253);
 }
 QMainWindow{
@@ -48,9 +54,108 @@ QTabWidget{
     height: 20px;
 }
 
+QPlainTextEdit
+{
+    height: 30px;
+    border-style:none;
+    border-radius:5px;
+    border:1px solid gray;
+
+}
+QPlainTextEdit:focus
+{
+    border:1px solid rgb(2, 136, 209);
+}
+
 
 QTabBar::tab { font-size:18px; background: rgb(247, 250, 253); color: black; padding:7px; text-align:center; min-width: 50px; border: 1px solid rgba(0, 0, 0, 0.0975);}
 QTabBar::tab:selected { background: rgb(2, 136, 209); color: white; }
+
+QScrollBar:vertical
+{
+    width:10px;
+    background:rgba(0,0,0,0%);
+    margin:0px,0px,0px,0px;
+    padding-top:9px;
+    padding-bottom:9px;
+}
+QScrollBar::handle:vertical
+{
+    width:8px;
+    background:rgba(0,0,0,25%);
+    border-radius:4px;
+    min-height:20;
+}
+QScrollBar::handle:vertical:hover
+{
+    width:8px;
+    background:rgba(0,0,0,50%);
+    border-radius:4px;
+    min-height:20;
+}
+QScrollBar::add-line:vertical
+{
+    height:9px;width:8px;
+    border-image:url(:/images/a/3.png);
+    subcontrol-position:bottom;
+}
+QScrollBar::sub-line:vertical
+{
+    height:9px;width:8px;
+    border-image:url(:/images/a/1.png);
+    subcontrol-position:top;
+}
+
+QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical
+{
+    background:rgba(0,0,0,10%);
+    border-radius:4px;
+}
+
+
+
+
+QScrollBar:horizontal
+{
+    height:10px;
+    background:rgba(0,0,0,0%);
+    margin:0px,0px,0px,0px;
+    padding-left:9px;
+    padding-right:9px;
+}
+QScrollBar::handle:horizontal
+{
+    height:8px;
+    background:rgba(0,0,0,25%);
+    border-radius:4px;
+    min-height:20;
+}
+QScrollBar::handle:horizontal:hover
+{
+    height:8px;
+    background:rgba(0,0,0,50%);
+    border-radius:4px;
+    min-height:20;
+}
+
+QScrollBar::add-line:horizontal
+{
+    height:9px;width:8px;
+    border-image:url(:/images/a/3.png);
+    subcontrol-position:bottom;
+}
+QScrollBar::sub-line:horizontal
+{
+    height:9px;width:8px;
+    border-image:url(:/images/a/1.png);
+    subcontrol-position:top;
+}
+
+QScrollBar::add-page:vertical,QScrollBar::sub-page:horizontal
+{
+    background:rgba(0,0,0,10%);
+    border-radius:4px;
+}
 
 </string>
   </property>
@@ -58,7 +163,7 @@ QTabBar::tab:selected { background: rgb(2, 136, 209); color: white; }
    <property name="layoutDirection">
     <enum>Qt::LeftToRight</enum>
    </property>
-   <layout class="QGridLayout" name="gridLayout" rowstretch="0" columnstretch="1,10" rowminimumheight="1" columnminimumwidth="0,0">
+   <layout class="QGridLayout" name="gridLayout" rowstretch="0" columnstretch="1,0">
     <property name="sizeConstraint">
      <enum>QLayout::SetNoConstraint</enum>
     </property>
@@ -81,7 +186,7 @@ QTabBar::tab:selected { background: rgb(2, 136, 209); color: white; }
      <number>30</number>
     </property>
     <item row="0" column="0">
-     <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0,0,0,10">
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0,0,0,0,10">
       <property name="spacing">
        <number>0</number>
       </property>
@@ -97,6 +202,9 @@ QTabBar::tab:selected { background: rgb(2, 136, 209); color: white; }
       </item>
       <item>
        <widget class="QPushButton" name="spiderButton">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
         <property name="minimumSize">
          <size>
           <width>130</width>
@@ -105,6 +213,9 @@ QTabBar::tab:selected { background: rgb(2, 136, 209); color: white; }
         </property>
         <property name="contextMenuPolicy">
          <enum>Qt::NoContextMenu</enum>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
         </property>
         <property name="text">
          <string>爬虫</string>
@@ -124,7 +235,46 @@ QTabBar::tab:selected { background: rgb(2, 136, 209); color: white; }
          <bool>true</bool>
         </property>
         <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
          <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="classButton">
+        <property name="minimumSize">
+         <size>
+          <width>130</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::NoContextMenu</enum>
+        </property>
+        <property name="text">
+         <string>分类</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>resources/classi.png</normaloff>
+          <activeon>resources/classiOn.png</activeon>resources/classi.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>37</width>
+          <height>37</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>false</bool>
         </property>
         <property name="autoExclusive">
          <bool>true</bool>
@@ -215,7 +365,7 @@ QTabBar::tab:selected { background: rgb(2, 136, 209); color: white; }
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="page_Spider">
        <layout class="QGridLayout" name="gridLayout_2" rowstretch="2,1">
@@ -524,6 +674,198 @@ QTabBar::tab:selected { background: rgb(2, 136, 209); color: white; }
             </property>
            </widget>
           </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_Classi">
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="2" column="0">
+         <widget class="QListWidget" name="images_listWidget">
+          <property name="minimumSize">
+           <size>
+            <width>1204</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QFrame" name="ClassiFrame">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>125</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <widget class="QFrame" name="frame_5">
+             <property name="maximumSize">
+              <size>
+               <width>10000</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="addClass_pushButton">
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>添加分类</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="addFolder_pushButton">
+                <property name="maximumSize">
+                 <size>
+                  <width>150</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>添加文件夹</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="classImagePath">
+                <property name="text">
+                 <string>图片文件夹</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="big_pushButton">
+                <property name="maximumSize">
+                 <size>
+                  <width>50</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>resources/bigger.png</normaloff>resources/bigger.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>27</width>
+                  <height>27</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="small_pushButton">
+                <property name="maximumSize">
+                 <size>
+                  <width>50</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>resources/smaller.png</normaloff>resources/smaller.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>30</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="classFrame">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+             </layout>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>

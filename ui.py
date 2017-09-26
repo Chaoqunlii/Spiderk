@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\ui.ui'
+# Form implementation generated from reading ui file 'ui.ui'
 #
 # Created by: PyQt5 UI code generator 5.9
 #
@@ -11,8 +11,149 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1373, 797)
+        MainWindow.resize(1373, 793)
         MainWindow.setAcceptDrops(True)
+        MainWindow.setStyleSheet("*{\n"
+"    font: 20px bold black;\n"
+"    font-family: Microsoft Yahei;\n"
+"}\n"
+"QPushButton{\n"
+"    color: black;\n"
+"    background-color: rgb(255, 255, 255);\n"
+"    height: 60px;\n"
+"    border: none;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    background-color: rgb(2, 136, 209);\n"
+"    height: 60px;\n"
+"    border: none;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    border-radius: 5px;\n"
+"    background-color: rgba(0,0,0,10%);\n"
+"    height: 60px;\n"
+"    border: none;\n"
+"}\n"
+"QPushButton:checked{\n"
+"    color: white;\n"
+"    background-color: rgb(2, 136, 209);\n"
+"    height: 60px;\n"
+"    border: none;\n"
+"}\n"
+"QFrame{\n"
+"    background-color: rgb(247, 250, 253);\n"
+"}\n"
+"QMainWindow{\n"
+"    background-color: white;\n"
+"}\n"
+"QTabWidget{\n"
+"    height: 20px;\n"
+"}\n"
+"\n"
+"QPlainTextEdit\n"
+"{\n"
+"    height: 30px;\n"
+"    border-style:none;\n"
+"    border-radius:5px;\n"
+"    border:1px solid gray;\n"
+"\n"
+"}\n"
+"QPlainTextEdit:focus\n"
+"{\n"
+"    border:1px solid rgb(2, 136, 209);\n"
+"}\n"
+"\n"
+"\n"
+"QTabBar::tab { font-size:18px; background: rgb(247, 250, 253); color: black; padding:7px; text-align:center; min-width: 50px; border: 1px solid rgba(0, 0, 0, 0.0975);}\n"
+"QTabBar::tab:selected { background: rgb(2, 136, 209); color: white; }\n"
+"\n"
+"QScrollBar:vertical\n"
+"{\n"
+"    width:10px;\n"
+"    background:rgba(0,0,0,0%);\n"
+"    margin:0px,0px,0px,0px;\n"
+"    padding-top:9px;\n"
+"    padding-bottom:9px;\n"
+"}\n"
+"QScrollBar::handle:vertical\n"
+"{\n"
+"    width:8px;\n"
+"    background:rgba(0,0,0,25%);\n"
+"    border-radius:4px;\n"
+"    min-height:20;\n"
+"}\n"
+"QScrollBar::handle:vertical:hover\n"
+"{\n"
+"    width:8px;\n"
+"    background:rgba(0,0,0,50%);\n"
+"    border-radius:4px;\n"
+"    min-height:20;\n"
+"}\n"
+"QScrollBar::add-line:vertical\n"
+"{\n"
+"    height:9px;width:8px;\n"
+"    border-image:url(:/images/a/3.png);\n"
+"    subcontrol-position:bottom;\n"
+"}\n"
+"QScrollBar::sub-line:vertical\n"
+"{\n"
+"    height:9px;width:8px;\n"
+"    border-image:url(:/images/a/1.png);\n"
+"    subcontrol-position:top;\n"
+"}\n"
+"\n"
+"QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical\n"
+"{\n"
+"    background:rgba(0,0,0,10%);\n"
+"    border-radius:4px;\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"QScrollBar:horizontal\n"
+"{\n"
+"    height:10px;\n"
+"    background:rgba(0,0,0,0%);\n"
+"    margin:0px,0px,0px,0px;\n"
+"    padding-left:9px;\n"
+"    padding-right:9px;\n"
+"}\n"
+"QScrollBar::handle:horizontal\n"
+"{\n"
+"    height:8px;\n"
+"    background:rgba(0,0,0,25%);\n"
+"    border-radius:4px;\n"
+"    min-height:20;\n"
+"}\n"
+"QScrollBar::handle:horizontal:hover\n"
+"{\n"
+"    height:8px;\n"
+"    background:rgba(0,0,0,50%);\n"
+"    border-radius:4px;\n"
+"    min-height:20;\n"
+"}\n"
+"\n"
+"QScrollBar::add-line:horizontal\n"
+"{\n"
+"    height:9px;width:8px;\n"
+"    border-image:url(:/images/a/3.png);\n"
+"    subcontrol-position:bottom;\n"
+"}\n"
+"QScrollBar::sub-line:horizontal\n"
+"{\n"
+"    height:9px;width:8px;\n"
+"    border-image:url(:/images/a/1.png);\n"
+"    subcontrol-position:top;\n"
+"}\n"
+"\n"
+"QScrollBar::add-page:vertical,QScrollBar::sub-page:horizontal\n"
+"{\n"
+"    background:rgba(0,0,0,10%);\n"
+"    border-radius:4px;\n"
+"}\n"
+"\n"
+"")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.centralwidget.setObjectName("centralwidget")
@@ -31,26 +172,42 @@ class Ui_MainWindow(object):
         self.frame_2.setObjectName("frame_2")
         self.verticalLayout.addWidget(self.frame_2)
         self.spiderButton = QtWidgets.QPushButton(self.centralwidget)
+        self.spiderButton.setEnabled(True)
         self.spiderButton.setMinimumSize(QtCore.QSize(130, 0))
         self.spiderButton.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.spiderButton.setLayoutDirection(QtCore.Qt.LeftToRight)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("resources/spider.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         icon.addPixmap(QtGui.QPixmap("resources/spiderOn.png"), QtGui.QIcon.Active, QtGui.QIcon.On)
+        icon.addPixmap(QtGui.QPixmap("resources/spider.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.spiderButton.setIcon(icon)
         self.spiderButton.setIconSize(QtCore.QSize(40, 40))
         self.spiderButton.setCheckable(True)
-        self.spiderButton.setChecked(True)
+        self.spiderButton.setChecked(False)
         self.spiderButton.setAutoExclusive(True)
         self.spiderButton.setObjectName("spiderButton")
         self.verticalLayout.addWidget(self.spiderButton)
+        self.classButton = QtWidgets.QPushButton(self.centralwidget)
+        self.classButton.setMinimumSize(QtCore.QSize(130, 0))
+        self.classButton.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("resources/classiOn.png"), QtGui.QIcon.Active, QtGui.QIcon.On)
+        icon1.addPixmap(QtGui.QPixmap("resources/classi.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.classButton.setIcon(icon1)
+        self.classButton.setIconSize(QtCore.QSize(37, 37))
+        self.classButton.setCheckable(True)
+        self.classButton.setChecked(True)
+        self.classButton.setAutoRepeat(False)
+        self.classButton.setAutoExclusive(True)
+        self.classButton.setObjectName("classButton")
+        self.verticalLayout.addWidget(self.classButton)
         self.markButton = QtWidgets.QPushButton(self.centralwidget)
         self.markButton.setEnabled(True)
         self.markButton.setMouseTracking(False)
         self.markButton.setAcceptDrops(False)
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("resources/markerOn.png"), QtGui.QIcon.Active, QtGui.QIcon.Off)
-        icon1.addPixmap(QtGui.QPixmap("resources/marker.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.markButton.setIcon(icon1)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("resources/markerOn.png"), QtGui.QIcon.Active, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("resources/marker.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.markButton.setIcon(icon2)
         self.markButton.setIconSize(QtCore.QSize(40, 40))
         self.markButton.setCheckable(True)
         self.markButton.setChecked(False)
@@ -58,10 +215,10 @@ class Ui_MainWindow(object):
         self.markButton.setObjectName("markButton")
         self.verticalLayout.addWidget(self.markButton)
         self.settingButton = QtWidgets.QPushButton(self.centralwidget)
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("resources/settings.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon2.addPixmap(QtGui.QPixmap("resources/settingsOn.png"), QtGui.QIcon.Active, QtGui.QIcon.On)
-        self.settingButton.setIcon(icon2)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap("resources/settingsOn.png"), QtGui.QIcon.Active, QtGui.QIcon.On)
+        icon3.addPixmap(QtGui.QPixmap("resources/settings.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.settingButton.setIcon(icon3)
         self.settingButton.setIconSize(QtCore.QSize(35, 35))
         self.settingButton.setCheckable(True)
         self.settingButton.setAutoExclusive(True)
@@ -73,7 +230,7 @@ class Ui_MainWindow(object):
         self.frame.setObjectName("frame")
         self.verticalLayout.addWidget(self.frame)
         self.verticalLayout.setStretch(0, 1)
-        self.verticalLayout.setStretch(4, 10)
+        self.verticalLayout.setStretch(5, 10)
         self.gridLayout.addLayout(self.verticalLayout, 0, 0, 1, 1)
         self.stackedWidget = QtWidgets.QStackedWidget(self.centralwidget)
         self.stackedWidget.setEnabled(True)
@@ -232,6 +389,76 @@ class Ui_MainWindow(object):
         self.gridLayout_2.setRowStretch(0, 2)
         self.gridLayout_2.setRowStretch(1, 1)
         self.stackedWidget.addWidget(self.page_Spider)
+        self.page_Classi = QtWidgets.QWidget()
+        self.page_Classi.setObjectName("page_Classi")
+        self.gridLayout_3 = QtWidgets.QGridLayout(self.page_Classi)
+        self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_3.setObjectName("gridLayout_3")
+        self.images_listWidget = QtWidgets.QListWidget(self.page_Classi)
+        self.images_listWidget.setMinimumSize(QtCore.QSize(1204, 0))
+        self.images_listWidget.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.images_listWidget.setObjectName("images_listWidget")
+        self.gridLayout_3.addWidget(self.images_listWidget, 2, 0, 1, 1)
+        self.ClassiFrame = QtWidgets.QFrame(self.page_Classi)
+        self.ClassiFrame.setMinimumSize(QtCore.QSize(0, 50))
+        self.ClassiFrame.setMaximumSize(QtCore.QSize(16777215, 125))
+        self.ClassiFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.ClassiFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.ClassiFrame.setObjectName("ClassiFrame")
+        self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.ClassiFrame)
+        self.verticalLayout_7.setObjectName("verticalLayout_7")
+        self.frame_5 = QtWidgets.QFrame(self.ClassiFrame)
+        self.frame_5.setMaximumSize(QtCore.QSize(10000, 50))
+        self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_5.setObjectName("frame_5")
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.frame_5)
+        self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
+        self.addClass_pushButton = QtWidgets.QPushButton(self.frame_5)
+        self.addClass_pushButton.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.addClass_pushButton.setObjectName("addClass_pushButton")
+        self.horizontalLayout_5.addWidget(self.addClass_pushButton)
+        self.addFolder_pushButton = QtWidgets.QPushButton(self.frame_5)
+        self.addFolder_pushButton.setMaximumSize(QtCore.QSize(150, 16777215))
+        self.addFolder_pushButton.setObjectName("addFolder_pushButton")
+        self.horizontalLayout_5.addWidget(self.addFolder_pushButton)
+        self.classImagePath = QtWidgets.QLabel(self.frame_5)
+        self.classImagePath.setObjectName("classImagePath")
+        self.horizontalLayout_5.addWidget(self.classImagePath)
+        self.big_pushButton = QtWidgets.QPushButton(self.frame_5)
+        self.big_pushButton.setMaximumSize(QtCore.QSize(50, 16777215))
+        self.big_pushButton.setText("")
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap("resources/bigger.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.big_pushButton.setIcon(icon4)
+        self.big_pushButton.setIconSize(QtCore.QSize(27, 27))
+        self.big_pushButton.setObjectName("big_pushButton")
+        self.horizontalLayout_5.addWidget(self.big_pushButton)
+        self.small_pushButton = QtWidgets.QPushButton(self.frame_5)
+        self.small_pushButton.setMaximumSize(QtCore.QSize(50, 16777215))
+        self.small_pushButton.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.small_pushButton.setText("")
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap("resources/smaller.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.small_pushButton.setIcon(icon5)
+        self.small_pushButton.setIconSize(QtCore.QSize(30, 30))
+        self.small_pushButton.setObjectName("small_pushButton")
+        self.horizontalLayout_5.addWidget(self.small_pushButton)
+        self.verticalLayout_7.addWidget(self.frame_5)
+        self.classFrame = QtWidgets.QFrame(self.ClassiFrame)
+        self.classFrame.setMinimumSize(QtCore.QSize(0, 60))
+        self.classFrame.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.classFrame.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.classFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.classFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.classFrame.setObjectName("classFrame")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.classFrame)
+        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.verticalLayout_7.addWidget(self.classFrame)
+        self.gridLayout_3.addWidget(self.ClassiFrame, 1, 0, 1, 1)
+        self.stackedWidget.addWidget(self.page_Classi)
         self.page_mark = QtWidgets.QWidget()
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -262,16 +489,16 @@ class Ui_MainWindow(object):
         self.fileList_listWidget.setObjectName("fileList_listWidget")
         self.verticalLayout_6.addWidget(self.fileList_listWidget)
         self.imageSelect_pushButton = QtWidgets.QPushButton(self.fileList_widget)
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("resources/file.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.imageSelect_pushButton.setIcon(icon3)
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap("resources/file.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.imageSelect_pushButton.setIcon(icon6)
         self.imageSelect_pushButton.setIconSize(QtCore.QSize(30, 20))
         self.imageSelect_pushButton.setObjectName("imageSelect_pushButton")
         self.verticalLayout_6.addWidget(self.imageSelect_pushButton)
         self.imagesSelect_pushButton = QtWidgets.QPushButton(self.fileList_widget)
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("resources/folder.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.imagesSelect_pushButton.setIcon(icon4)
+        icon7 = QtGui.QIcon()
+        icon7.addPixmap(QtGui.QPixmap("resources/folder.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.imagesSelect_pushButton.setIcon(icon7)
         self.imagesSelect_pushButton.setIconSize(QtCore.QSize(20, 20))
         self.imagesSelect_pushButton.setObjectName("imagesSelect_pushButton")
         self.verticalLayout_6.addWidget(self.imagesSelect_pushButton)
@@ -306,9 +533,9 @@ class Ui_MainWindow(object):
         self.pushButton_PathSelect = QtWidgets.QPushButton(self.page_Settings)
         self.pushButton_PathSelect.setGeometry(QtCore.QRect(660, 70, 51, 41))
         self.pushButton_PathSelect.setText("")
-        icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("resources/openfiles.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_PathSelect.setIcon(icon5)
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap("resources/openfiles.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_PathSelect.setIcon(icon8)
         self.pushButton_PathSelect.setIconSize(QtCore.QSize(40, 40))
         self.pushButton_PathSelect.setObjectName("pushButton_PathSelect")
         self.label_Proxy = QtWidgets.QLabel(self.page_Settings)
@@ -330,13 +557,11 @@ class Ui_MainWindow(object):
         self.plainTextEdit_Port.setObjectName("plainTextEdit_Port")
         self.stackedWidget.addWidget(self.page_Settings)
         self.gridLayout.addWidget(self.stackedWidget, 0, 1, 1, 1)
-        self.gridLayout.setRowMinimumHeight(0, 1)
         self.gridLayout.setColumnStretch(0, 1)
-        self.gridLayout.setColumnStretch(1, 10)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
         self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -344,6 +569,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "QtSpider"))
         self.spiderButton.setText(_translate("MainWindow", "爬虫"))
+        self.classButton.setText(_translate("MainWindow", "分类"))
         self.markButton.setText(_translate("MainWindow", "标注"))
         self.settingButton.setText(_translate("MainWindow", "设置"))
         self.tabWidget.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
@@ -373,6 +599,9 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_Porn), _translate("MainWindow", "porn"))
         self.pushButton_Pornpics.setText(_translate("MainWindow", "查看分类"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_Pornpics), _translate("MainWindow", "pornpics"))
+        self.addClass_pushButton.setText(_translate("MainWindow", "添加分类"))
+        self.addFolder_pushButton.setText(_translate("MainWindow", "添加文件夹"))
+        self.classImagePath.setText(_translate("MainWindow", "图片文件夹"))
         self.fileList_label.setText(_translate("MainWindow", "文件列表"))
         self.imageSelect_pushButton.setText(_translate("MainWindow", "选择文件"))
         self.imagesSelect_pushButton.setText(_translate("MainWindow", "选择文件夹"))
