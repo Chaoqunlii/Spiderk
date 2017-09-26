@@ -567,7 +567,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "QtSpider"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Spiderk"))
         self.spiderButton.setText(_translate("MainWindow", "爬虫"))
         self.classButton.setText(_translate("MainWindow", "分类"))
         self.markButton.setText(_translate("MainWindow", "标注"))
